@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace DataTransferService
+namespace DataTransferService.Exceptions
 {
     [Serializable]
     internal class InvalidParameterException : Exception
