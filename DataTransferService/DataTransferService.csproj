@@ -48,10 +48,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +70,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationForm.cs" />
+    <Compile Include="AspNetRole.cs" />
+    <Compile Include="AspNetRoleClaim.cs" />
+    <Compile Include="AspNetUser.cs" />
+    <Compile Include="AspNetUserClaim.cs" />
+    <Compile Include="AspNetUserLogin.cs" />
+    <Compile Include="AspNetUserRole.cs" />
+    <Compile Include="AspNetUserToken.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Buyer.cs" />
+    <Compile Include="Case.cs" />
+    <Compile Include="CibReportItem.cs" />
+    <Compile Include="ExistingLoan.cs" />
+    <Compile Include="FixedAsset.cs" />
+    <Compile Include="LoanFacility.cs" />
+    <Compile Include="LoanProduct.cs" />
+    <Compile Include="Machinery.cs" />
+    <Compile Include="LoanApplicationContext.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="Shareholder.cs" />
     <Compile Include="src\Exceptions\InvalidParameterException.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
@@ -69,6 +98,9 @@
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="src\UseCases\Logger\LoggerUseCase.cs" />
+    <Compile Include="StockItem.cs" />
+    <Compile Include="Successor.cs" />
+    <Compile Include="Supplier.cs" />
     <Compile Include="TransferService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -80,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
@@ -100,6 +133,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Entities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
